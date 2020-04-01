@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ResourceConsumptionTool
 //
-//  Created by Suhas Phaniraj on 5/3/18.
+//  Created by Suhas Madnanth on 5/3/18.
 //  Copyright © 2018 ResourceConsumptionTool. All rights reserved.
 //
 

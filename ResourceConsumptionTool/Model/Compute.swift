@@ -2,7 +2,7 @@
 //  Compute.swift
 //  ResourceConsumptionTool
 //
-//  Created by Suhas on 28/03/20.
+//  Created by Suhas Madnanth on 28/03/20.
 //  Copyright © 2020 ResourceConsumptionTool. All rights reserved.
 //
 
