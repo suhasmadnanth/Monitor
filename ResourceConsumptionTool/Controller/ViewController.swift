@@ -16,7 +16,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var processListTableView: NSTableView!
     @IBOutlet weak var tresholdCPU: NSTextField!
     var count = 0
-    var cpuThresholdValue = Int()
+    var cpuThresholdValue = 0
     @objc var timer = Timer()
     var processNameToAddToArrayAndDictionary = true
     var cpuImage : NSImage!
@@ -36,15 +36,18 @@ class ViewController: NSViewController {
     }
     
     @objc func timerAction() {
-        if count == 3 {
-            getResourceUtilizationOfAllProcesses()
-            DispatchQueue.main.async {
-                self.processListTableView.reloadData()
+        if cpuCompute.processNamesArray.count > 0 {
+            if count == 3 {
+                print("Timer for every 3 seconds")
+                getResourceUtilizationOfAllProcesses()
+                DispatchQueue.main.async {
+                    self.processListTableView.reloadData()
+                }
+                count = 0
+                selectedRow = -1
+            }else{
+                count = count + 1
             }
-            count = 0
-            selectedRow = -1
-        }else{
-            count = count + 1
         }
     }
     
@@ -112,8 +115,8 @@ class ViewController: NSViewController {
     }
     
     func getResourceUtilizationOfAllProcesses() {
-        //cpuThresholdValue = tresholdCPU.integerValue > 0 ? tresholdCPU.integerValue : 20
-        cpuCompute.getResourceConsumption(treshold: cpuThresholdValue)
+        cpuThresholdValue = tresholdCPU.integerValue > 0 ? tresholdCPU.integerValue : 20
+        cpuCompute.getResourceConsumption(treshold: tresholdCPU.integerValue)
         if cpuCompute.arrayToSaveProcessNameToShowInNotification.count > 0 {
             showNotification(cpuCompute.arrayToSaveProcessNameToShowInNotification as NSArray)
             for processNameToDelete in cpuCompute.arrayToSaveProcessNameToShowInNotification {
@@ -139,19 +142,28 @@ class ViewController: NSViewController {
         notification.subtitle = "CPU Consumption is high"
         notification.soundName = NSUserNotificationDefaultSoundName
         NSUserNotificationCenter.default.deliver(notification)
-        sampleCollect.getSampleOfTheProcesses1(arrayToSaveProcessNameToShowInNotification as NSArray)
+        sampleCollect.getSampleOfTheProcesses(arrayToSaveProcessNameToShowInNotification as NSArray)
     }
     
     
     @IBAction func saveOrEditCpuTresholdPercentage(_ sender: NSButton) {
         if sender.title == "Edit" {
+            cpuThresholdValue = Int(tresholdCPU.stringValue)!
             tresholdCPU.isEnabled = true
-            cpuThresholdValue = tresholdCPU.integerValue
             sender.title = "Save"
+            print("Integer value after edit is \(Int(tresholdCPU.stringValue)!)")
         }else{
-            tresholdCPU.isEnabled = false
-            cpuThresholdValue = tresholdCPU.integerValue
-            sender.title = "Edit"
+            if Int(tresholdCPU.stringValue) != nil {
+                cpuThresholdValue = Int(tresholdCPU.stringValue)!
+                sender.title = "Edit"
+                tresholdCPU.isEnabled = false
+                print("Integer value after edit is \(Int(tresholdCPU.stringValue)!)")
+            }else{
+                cpuThresholdValue = 20
+                tresholdCPU.integerValue = 20
+                sender.title = "Edit"
+                tresholdCPU.isEnabled = false
+            }
         }
     }
 }

@@ -13,9 +13,21 @@
 		627D720D209AEE030058B822 /* ResourceConsumptionTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 627D720B209AEE030058B822 /* ResourceConsumptionTool.xcdatamodeld */; };
 		627D7212209AEE030058B822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627D7210209AEE030058B822 /* Main.storyboard */; };
 		62FB5F7D21038C04007E5F4D /* CPU icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62FB5F7C21038C04007E5F4D /* CPU icon.png */; };
+		6DDC703124822F1200FA2812 /* SampleProcessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC703024822F1200FA2812 /* SampleProcessTests.swift */; };
+		6DDC703324828CE200FA2812 /* ComputeResourceConsumptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC703224828CE200FA2812 /* ComputeResourceConsumptionTests.swift */; };
 		AD1F93D7242F93990066B3F5 /* Compute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F93D6242F93990066B3F5 /* Compute.swift */; };
 		AD1F93DB2430C1A80066B3F5 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F93DA2430C1A80066B3F5 /* Sample.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DC8A4322472B4EE00C3CCAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 627D71FC209AEE030058B822 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 627D7203209AEE030058B822;
+			remoteInfo = ResourceConsumptionTool;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6205FBD520BEC69000293488 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,12 +39,23 @@
 		627D7213209AEE040058B822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		627D7214209AEE040058B822 /* ResourceConsumptionTool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResourceConsumptionTool.entitlements; sourceTree = "<group>"; };
 		62FB5F7C21038C04007E5F4D /* CPU icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CPU icon.png"; sourceTree = "<group>"; };
+		6DC8A42D2472B4EE00C3CCAE /* ResourceConsumptionToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResourceConsumptionToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DC8A4312472B4EE00C3CCAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DDC703024822F1200FA2812 /* SampleProcessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProcessTests.swift; sourceTree = "<group>"; };
+		6DDC703224828CE200FA2812 /* ComputeResourceConsumptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeResourceConsumptionTests.swift; sourceTree = "<group>"; };
 		AD1F93D6242F93990066B3F5 /* Compute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compute.swift; sourceTree = "<group>"; };
 		AD1F93DA2430C1A80066B3F5 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		627D7201209AEE030058B822 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DC8A42A2472B4EE00C3CCAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				627D7206209AEE030058B822 /* ResourceConsumptionTool */,
+				6DC8A42E2472B4EE00C3CCAE /* ResourceConsumptionToolTests */,
 				627D7205209AEE030058B822 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				627D7204209AEE030058B822 /* ResourceConsumptionTool.app */,
+				6DC8A42D2472B4EE00C3CCAE /* ResourceConsumptionToolTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +96,16 @@
 				AD1F93D5242F93040066B3F5 /* Model */,
 			);
 			path = ResourceConsumptionTool;
+			sourceTree = "<group>";
+		};
+		6DC8A42E2472B4EE00C3CCAE /* ResourceConsumptionToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DC8A4312472B4EE00C3CCAE /* Info.plist */,
+				6DDC703024822F1200FA2812 /* SampleProcessTests.swift */,
+				6DDC703224828CE200FA2812 /* ComputeResourceConsumptionTests.swift */,
+			);
+			path = ResourceConsumptionToolTests;
 			sourceTree = "<group>";
 		};
 		AD1F93D5242F93040066B3F5 /* Model */ = {
@@ -119,13 +154,31 @@
 			productReference = 627D7204209AEE030058B822 /* ResourceConsumptionTool.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6DC8A42C2472B4EE00C3CCAE /* ResourceConsumptionToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DC8A4362472B4EE00C3CCAE /* Build configuration list for PBXNativeTarget "ResourceConsumptionToolTests" */;
+			buildPhases = (
+				6DC8A4292472B4EE00C3CCAE /* Sources */,
+				6DC8A42A2472B4EE00C3CCAE /* Frameworks */,
+				6DC8A42B2472B4EE00C3CCAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DC8A4332472B4EE00C3CCAE /* PBXTargetDependency */,
+			);
+			name = ResourceConsumptionToolTests;
+			productName = ResourceConsumptionToolTests;
+			productReference = 6DC8A42D2472B4EE00C3CCAE /* ResourceConsumptionToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		627D71FC209AEE030058B822 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = ResourceConsumptionTool;
 				TargetAttributes = {
@@ -133,6 +186,11 @@
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 1130;
 						ProvisioningStyle = Manual;
+					};
+					6DC8A42C2472B4EE00C3CCAE = {
+						CreatedOnToolsVersion = 11.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 627D7203209AEE030058B822;
 					};
 				};
 			};
@@ -150,6 +208,7 @@
 			projectRoot = "";
 			targets = (
 				627D7203209AEE030058B822 /* ResourceConsumptionTool */,
+				6DC8A42C2472B4EE00C3CCAE /* ResourceConsumptionToolTests */,
 			);
 		};
 /* End PBXProject section */
@@ -162,6 +221,13 @@
 				6205FBD620BEC69000293488 /* Assets.xcassets in Resources */,
 				62FB5F7D21038C04007E5F4D /* CPU icon.png in Resources */,
 				627D7212209AEE030058B822 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DC8A42B2472B4EE00C3CCAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +246,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6DC8A4292472B4EE00C3CCAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDC703124822F1200FA2812 /* SampleProcessTests.swift in Sources */,
+				6DDC703324828CE200FA2812 /* ComputeResourceConsumptionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DC8A4332472B4EE00C3CCAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 627D7203209AEE030058B822 /* ResourceConsumptionTool */;
+			targetProxy = 6DC8A4322472B4EE00C3CCAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		627D7210209AEE030058B822 /* Main.storyboard */ = {
@@ -338,6 +421,47 @@
 			};
 			name = Release;
 		};
+		6DC8A4342472B4EE00C3CCAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ResourceConsumptionToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = unittesting.ResourceConsumptionToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ResourceConsumptionTool.app/Contents/MacOS/ResourceConsumptionTool";
+			};
+			name = Debug;
+		};
+		6DC8A4352472B4EE00C3CCAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ResourceConsumptionToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = unittesting.ResourceConsumptionToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ResourceConsumptionTool.app/Contents/MacOS/ResourceConsumptionTool";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +479,15 @@
 			buildConfigurations = (
 				627D7218209AEE040058B822 /* Debug */,
 				627D7219209AEE040058B822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DC8A4362472B4EE00C3CCAE /* Build configuration list for PBXNativeTarget "ResourceConsumptionToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DC8A4342472B4EE00C3CCAE /* Debug */,
+				6DC8A4352472B4EE00C3CCAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
